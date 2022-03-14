@@ -30,7 +30,6 @@
     <script src="../../swpubapp/public/mob/js/i18nUtil.js"></script>
    
     <!--get time and update js -->
-<!--
     <script type="text/javascript">
         window.onload = function(){
             var d = new Date();
@@ -40,7 +39,7 @@
             if(month >= 1 && month <= 9){
                 month = "0" + month;
             }
-            var date = d.getDate();
+            var date = d.getDate() - 1;
             if(date >=0 && date <= 9){
                 date = "0" + date;
             }
@@ -54,7 +53,6 @@
             document.getElementById("range-date").innerHTML = rangedate;
         }  
     </script>
--->
     
     <style type="text/css">
         .emapm-form input,

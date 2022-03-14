@@ -43,12 +43,19 @@
                 month = "0" + month;
             }
             var date = d.getDate();
+            var date1 = d.getDate()-1;
             if(date >=0 && date <= 9){
                 date = "0" + date;
             }
+            if(date1 >=0 && date1 <= 9){
+                date1 = "0" + date1;
+            }
             var qjdate = year + "-" + month + "-" + date;
+            var qjdate1 = year + "-" + month + "-" + date1;
             var rangedate = qjdate + " 至 " + qjdate + " / 共1天";
+            var rangedate1 = qjdate1 + " 至 " + qjdate1 + " / 共1天";
             document.getElementById("range-date").innerHTML = rangedate;
+            document.getElementById("range-date1").innerHTML = rangedate1;
         }  
     </script>
     
@@ -107,7 +114,7 @@
                                 </div>
                                 <div class="mint-layout-lr">
                                     <div position="left" class="mint-layout-lr-item mint-layout-container">
-                                        <div class="mint-text bh-color-gray-3 sjaky9s9n mt-color-default">2022-03-14 至
+                                        <div id="range-date1" class="mint-text bh-color-gray-3 sjaky9s9n mt-color-default">2022-03-14 至
                                             2022-03-14 / 共1天</div>
                                     </div>
                                     <div position="right" class="mint-layout-lr-item mint-layout-container OCjaup3gjo">
