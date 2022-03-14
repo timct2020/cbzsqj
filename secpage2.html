@@ -30,6 +30,7 @@
     <script src="../../swpubapp/public/mob/js/i18nUtil.js"></script>
    
     <!--get time and update js -->
+<!--
     <script type="text/javascript">
         window.onload = function(){
             var d = new Date();
@@ -40,24 +41,20 @@
                 month = "0" + month;
             }
             var date = d.getDate();
-            var date1 = d.getDate()-1;
             if(date >=0 && date <= 9){
                 date = "0" + date;
             }
-            if(date1 >=0 && date1 <= 9){
-                date1 = "0" + date1;
-            }
             var qjdate = year + "-" + month + "-" + date;
-            var qjdate1 = year + "-" + month + "-" + date1;
             var rangedate = qjdate + " 至 " + qjdate;
-            var fdydate = qjdate1 + " " + "10:24:39";
+            var fdydate = qjdate + " " + "08:24:39";
             document.getElementById("start-date").innerHTML = qjdate;
             document.getElementById("end-date").innerHTML = qjdate;
-            document.getElementById("apply-date").innerHTML = qjdate1;
+            document.getElementById("apply-date").innerHTML = qjdate;
             document.getElementById("fdy-date").innerHTML = fdydate;
             document.getElementById("range-date").innerHTML = rangedate;
         }  
     </script>
+-->
     
     <style type="text/css">
         .emapm-form input,
@@ -281,8 +278,8 @@
                     <div class="mint-layout-spacing sjakx3nec" style="height: 15px;"></div>
                     <div class="mint-layout-container cjarutg5r">
                         <div class="mint-hr" style="background: rgb(232, 232, 232);"></div>
-                        <div class="mint-layout-container sfxj-class" style="display: none;"><img
-                                src="../../../sys/swmxsqjapp/public/images/icon_ok.png" alt="已销假"
+                        <div class="mint-layout-container sfxj-class" style=""><img
+                                src="./icon/icon_ok.png" alt="已销假"
                                 style="width: 25px; position: relative; left: 20px; top: 6px;"> <span
                                 id="sfxj">已销假</span>
                         </div>
@@ -362,8 +359,8 @@
                                                         </div>
                                                         <div class="mint-cell-value mt-color-grey-lv3"
                                                             style="flex: 1 1 calc(100% - 96px); justify-content: normal;">
-                                                            <div id="range-date" class="em-select-value mt-color-grey-lv3">2022-03-12 至
-                                                                2022-03-12</div>
+                                                            <div id="range-date" class="em-select-value mt-color-grey-lv3">2022-03-14 至
+                                                                2022-03-14</div>
                                                         </div>
                                                         <!---->
                                                     </div>
@@ -640,7 +637,7 @@
                                         </div>
                                         <div class="mint-step__time mt-color-grey-lv4">
                                             <div id="apply-date" class="mint-text bh-color-gray-4 OCjaunojrmr mt-color-default">
-                                                2022-03-14
+                                                2022-03-13
                                             </div>
                                         </div>
                                         <div class="mint-step__title">
@@ -657,7 +654,7 @@
                                                 class="mint-icon mint-icon-checked iconfont icon-wancheng mt-color-primary"></i>
                                         </div>
                                         <div class="mint-step__time mt-color-grey-lv4">
-                                            <div id="fdy-date" class="mint-text bh-color-gray-4 OCjaunojrmr mt-color-default">2022-01-01 08:20:39</div>
+                                            <div id="fdy-date" class="mint-text bh-color-gray-4 OCjaunojrmr mt-color-default">2022-03-13 10:32:39</div>
                                         </div>
                                         <div class="mint-step__title">辅导员审核</div>
                                         <div class="mint-step__line mt-bg-grey-lv6"></div>
