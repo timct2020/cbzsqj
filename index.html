@@ -43,19 +43,27 @@
                 month = "0" + month;
             }
             var date = d.getDate();
-            var date1 = d.getDate()-1;
             if(date >=0 && date <= 9){
                 date = "0" + date;
             }
-            if(date1 >=0 && date1 <= 9){
-                date1 = "0" + date1;
+            // get yesterday
+            var yesterday = new Date(d);
+            yesterday.setDate(yesterday.getDate() - 1);
+            var year_ = yesterday.getFullYear();
+            var month_ = yesterday.getMonth() + 1;
+            if(month_ >= 1 && month_ <= 9){
+                month_ = "0" + month_;
+            }
+            var date_ = yesterday.getDate();
+            if(date_ >=0 && date_ <= 9){
+                date_ = "0" + date_;
             }
             var qjdate = year + "-" + month + "-" + date;
-            var qjdate1 = year + "-" + month + "-" + date1;
+            var qjdate_ = year_ + "-" + month_ + "-" + date_;
             var rangedate = qjdate + " 至 " + qjdate + " / 共1天";
-            var rangedate1 = qjdate1 + " 至 " + qjdate1 + " / 共1天";
+            var rangedate_ = qjdate_ + " 至 " + qjdate_ + " / 共1天";
             document.getElementById("range-date").innerHTML = rangedate;
-            document.getElementById("range-date1").innerHTML = rangedate1;
+            document.getElementById("range-date1").innerHTML = rangedate_;
         }  
     </script>
     

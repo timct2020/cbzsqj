@@ -33,17 +33,19 @@
     <script type="text/javascript">
         window.onload = function(){
             var d = new Date();
-            // get date
-            var year = d.getFullYear();
-            var month = d.getMonth() + 1;
-            if(month >= 1 && month <= 9){
-                month = "0" + month;
+            // get yesterday
+            var yesterday = new Date(d);
+            yesterday.setDate(yesterday.getDate() - 1);
+            var year_ = yesterday.getFullYear();
+            var month_ = yesterday.getMonth() + 1;
+            if(month_ >= 1 && month_ <= 9){
+                month_ = "0" + month_;
             }
-            var date = d.getDate() - 1;
-            if(date >=0 && date <= 9){
-                date = "0" + date;
+            var date_ = yesterday.getDate();
+            if(date_ >=0 && date_ <= 9){
+                date_ = "0" + date_;
             }
-            var qjdate = year + "-" + month + "-" + date;
+            var qjdate = year_ + "-" + month_ + "-" + date_;
             var rangedate = qjdate + " 至 " + qjdate;
             var fdydate = qjdate + " " + "08:24:39";
             document.getElementById("start-date").innerHTML = qjdate;
